@@ -225,24 +225,6 @@ layer_name {
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        comma: comma {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA";
-            bindings = <&kp COMMA>, <&kp SQT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        period: period {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PERIOD";
-            bindings = <&kp PERIOD>, <&kp DQT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     macros {
@@ -287,67 +269,67 @@ layer_name {
 
         base {
             bindings = <
-&none       &none         &none         &none          &none                                                                                                                &none          &none          &none              &none                      &none
-&none       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                        &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
-&kp TAB     &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                         &kp Y   &kp U          &kp I          &kp O              &kp P                      &none
-&kp ESC     &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                         &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &caps_word
-&none       &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LSHIFT ESC  &mt LCTRL TAB  &kp LALT    &kp RALT  &mt RCTRL TAB  &msft             &kp N   &kp M          &comma         &period            &kp SLASH                  &none
-&magic 5 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &mo 3           &kp ENTER      &kp LGUI    &kp RGUI  &bspc          &lhs_tap 2 SPACE          &kp DOWN       &kp UP         &kp PAGE_DOWN      &kp PG_UP                  &magic 5 0
+&none       &none         &none         &none          &none                                                                                                              &none          &none          &none              &none                      &none
+&none       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                      &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
+&kp TAB     &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                       &kp Y   &kp U          &kp I          &kp O              &kp P                      &none
+&kp ESC     &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                       &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &caps_word
+&none       &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LSHIFT ESC  &mt LCTRL TAB  &kp LALT  &kp RALT  &mt RCTRL TAB  &msft             &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &none
+&magic 5 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &mo 3           &kp ENTER      &kp LGUI  &kp RGUI  &bspc          &lhs_tap 2 SPACE          &kp DOWN       &kp UP         &kp PAGE_DOWN      &kp PG_UP                  &magic 5 0
             >;
         };
 
         right_hand {
             bindings = <
-&none  &none     &none     &none      &none                                                                           &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP   &none          &kp PAUSE_BREAK
-&none  &none     &none     &none      &none      &none                                                    &none       &none              &none         &none          &none          &none
-&none  &none     &none     &none      &none      &none                                                    &kp CARET   &kp EQUAL          &kp LS(N8)    &kp LS(EQUAL)  &kp MINUS      &none
-&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                                    &kp LS(N7)  &kp LS(MINUS)      &kp LS(SQT)   &kp SQT        &kp LS(BSLH)   &none
-&none  &none     &none     &none      &none      &none  &trans  &trans  &trans    &trans  &trans  &trans  &none       &kp LS(SEMICOLON)  &none         &none          &kp LS(SLASH)  &none
-&none  &none     &none     &none      &none             &trans  &trans  &trans    &trans  &trans  &trans              &none              &none         &none          &none          &none
+&none  &none     &none     &none      &none                                                                         &kp C_MUTE         &kp C_VOL_DN  &kp C_VOL_UP   &none          &kp PAUSE_BREAK
+&none  &none     &none     &none      &none      &none                                                  &none       &none              &none         &none          &none          &none
+&none  &none     &none     &none      &none      &none                                                  &kp CARET   &kp EQUAL          &kp LS(N8)    &kp LS(EQUAL)  &kp MINUS      &none
+&none  &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none                                                  &kp LS(N7)  &kp LS(MINUS)      &kp LS(SQT)   &kp SQT        &kp LS(BSLH)   &none
+&none  &none     &none     &none      &none      &none  &trans  &trans  &trans  &trans  &trans  &trans  &none       &kp LS(SEMICOLON)  &none         &none          &kp LS(SLASH)  &none
+&none  &none     &none     &none      &none             &trans  &trans  &trans  &trans  &trans  &trans              &none              &none         &none          &none          &none
             >;
         };
 
         symbols {
             bindings = <
-&none      &none     &none     &none     &none                                                                             &none      &none         &none     &none      &none
-&none      &none     &none     &none     &none     &none                                                        &none      &none      &none         &none     &none      &none
-&none      &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                                    &kp CARET  &kp EQUAL  &kp ASTERISK  &kp PLUS  &kp MINUS  &none
-&kp GRAVE  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp TILDE                                                    &kp AMPS   &kp UNDER  &kp DQT       &kp SQT   &kp PIPE   &none
-&none      &kp LBKT  &kp LT    &kp GT    &kp RBKT  &kp BSLH   &trans  &trans  &trans    &trans  &trans  &trans  &none      &kp COLON  &kp QMARK     &none     &none      &none
-&none      &none     &none     &none     &none                &trans  &trans  &trans    &trans  &trans  &trans             &none      &none         &none     &none      &none
+&none      &none     &none     &none     &none                                                                           &none      &none         &none     &none      &none
+&none      &none     &none     &none     &none     &none                                                      &none      &none      &none         &none     &none      &none
+&none      &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                                  &kp CARET  &kp EQUAL  &kp ASTERISK  &kp PLUS  &kp MINUS  &none
+&kp GRAVE  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp TILDE                                                  &kp AMPS   &kp UNDER  &kp DQT       &kp SQT   &kp PIPE   &none
+&none      &kp LBKT  &kp LT    &kp GT    &kp RBKT  &kp BSLH   &trans  &trans  &trans  &trans  &trans  &trans  &none      &kp COLON  &kp QMARK     &none     &none      &none
+&none      &none     &none     &none     &none                &trans  &trans  &trans  &trans  &trans  &trans             &none      &none         &none     &none      &none
             >;
         };
 
         numbers {
             bindings = <
-&none  &none  &none  &none  &none                                                                          &none      &none     &none     &none      &none
-&none  &none  &none  &none  &none      &none                                                    &none      &kp EQUAL  &kp STAR  &kp PLUS  &none      &none
-&none  &none  &none  &none  &none      &none                                                    &kp CARET  &kp N7     &kp N8    &kp N9    &kp MINUS  &none
-&none  &none  &none  &none  &kp UNDER  &none                                                    &kp COMMA  &kp N4     &kp N5    &kp N6    &kp DOT    &none
-&none  &none  &none  &none  &none      &none  &trans  &trans  &trans    &trans  &trans  &mo 4   &kp N0     &kp N1     &kp N2    &kp N3    &kp FSLH   &none
-&none  &none  &none  &none  &none             &trans  &trans  &trans    &trans  &trans  &trans             &none      &none     &none     &none      &none
+&none  &none  &none  &none  &none                                                                        &none      &none     &none     &none      &none
+&none  &none  &none  &none  &none      &none                                                  &none      &kp EQUAL  &kp STAR  &kp PLUS  &none      &none
+&none  &none  &none  &none  &none      &none                                                  &kp CARET  &kp N7     &kp N8    &kp N9    &kp MINUS  &none
+&none  &none  &none  &none  &kp UNDER  &none                                                  &kp COMMA  &kp N4     &kp N5    &kp N6    &kp DOT    &none
+&none  &none  &none  &none  &none      &none  &trans  &trans  &trans  &trans  &trans  &mo 4   &kp N0     &kp N1     &kp N2    &kp N3    &kp FSLH   &none
+&none  &none  &none  &none  &none             &trans  &trans  &trans  &trans  &trans  &trans             &none      &none     &none     &none      &none
             >;
         };
 
         fn {
             bindings = <
-&none  &none     &none         &none      &none                                                                &none    &none    &none    &none  &none
-&none  &none     &none         &none      &none      &none                                              &none  &kp F10  &kp F11  &kp F12  &none  &none
-&none  &none     &none         &none      &none      &none                                              &none  &kp F7   &kp F8   &kp F9   &none  &none
-&none  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                                              &none  &kp F4   &kp F5   &kp F6   &none  &none
-&none  &none     &none         &none      &none      &none  &none  &none  &none    &none  &none  &none  &none  &kp F1   &kp F2   &kp F3   &none  &none
-&none  &none     &none         &none      &none             &none  &none  &none    &none  &none  &none         &none    &none    &none    &none  &none
+&none  &none     &none         &none      &none                                                              &none    &none    &none    &none  &none
+&none  &none     &none         &none      &none      &none                                            &none  &kp F10  &kp F11  &kp F12  &none  &none
+&none  &none     &none         &none      &none      &none                                            &none  &kp F7   &kp F8   &kp F9   &none  &none
+&none  &kp LGUI  &kp LEFT_ALT  &kp LCTRL  &kp LSHFT  &none                                            &none  &kp F4   &kp F5   &kp F6   &none  &none
+&none  &none     &none         &none      &none      &none  &none  &none  &none  &none  &none  &none  &none  &kp F1   &kp F2   &kp F3   &none  &none
+&none  &none     &none         &none      &none             &none  &none  &none  &none  &none  &none         &none    &none    &none    &none  &none
             >;
         };
 
         magic_layer {
             bindings = <
-&bt BT_CLR   &none            &none            &none            &none                                                                                       &none  &none  &none  &none  &bt BT_CLR_ALL
-&none        &none            &none            &none            &none            &none                                                               &none  &none  &none  &none  &none  &none
-&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                     &none  &none  &none  &none  &none  &none
-&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                     &none  &none  &none  &none  &none  &bootloader
-&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none           &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
-&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB    &none  &none  &none         &none  &none  &none  &none  &to 0
+&bt BT_CLR   &none            &none            &none            &none                                                                                     &none  &none  &none  &none  &bt BT_CLR_ALL
+&none        &none            &none            &none            &none            &none                                                             &none  &none  &none  &none  &none  &none
+&none        &rgb_ug RGB_SPI  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_BRI  &rgb_ug RGB_TOG                                                   &none  &none  &none  &none  &none  &none
+&bootloader  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF                                                   &none  &none  &none  &none  &none  &bootloader
+&sys_reset   &none            &none            &none            &none            &none            &bt_2  &bt_3  &none         &none  &none  &none  &none  &none  &none  &none  &none  &sys_reset
+&none        &none            &none            &none            &none                             &bt_0  &bt_1  &out OUT_USB  &none  &none  &none         &none  &none  &none  &none  &to 0
             >;
         };
     };
