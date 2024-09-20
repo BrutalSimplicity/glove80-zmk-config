@@ -280,12 +280,12 @@ layer_name {
 
         symbols {
             bindings = <
-&none      &none     &none     &none     &none                                                                           &none      &none         &none     &none      &none
-&none      &none     &none     &none     &none     &none                                                      &none      &none      &none         &none     &none      &none
-&none      &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                                                  &kp CARET  &kp EQUAL  &kp ASTERISK  &kp PLUS  &kp MINUS  &none
-&kp GRAVE  &kp LBRC  &kp LPAR  &kp RPAR  &kp RBRC  &kp TILDE                                                  &kp AMPS   &kp UNDER  &kp DQT       &kp SQT   &kp PIPE   &none
-&none      &kp LBKT  &kp LT    &kp GT    &kp RBKT  &kp BSLH   &trans  &trans  &trans  &trans  &trans  &trans  &none      &kp COLON  &kp QMARK     &none     &none      &none
-&none      &none     &none     &none     &none                &trans  &trans  &trans  &trans  &trans  &trans             &none      &none         &none     &none      &none
+&none      &none      &none     &none              &none                                                                                &none      &none        &none      &none      &none
+&none      &kp LBRC   &kp LPAR  &kp RPAR           &kp RBRC   &none                                                              &none  &none      &none        &none      &none      &none
+&kp EXCL   &kp LBKT   &kp SQT   &kp DOUBLE_QUOTES  &kp RBKT   &kp QMARK                                                          &none  &kp LSHFT  &kp LCTRL    &kp PLUS   &kp LGUI   &none
+&kp GRAVE  &kp CARET  &kp STAR  &kp EQUAL          &kp UNDER  &kp DLLR                                                           &none  &kp BSPC   &kp TAB      &kp SPACE  &kp ENTER  &none
+&kp TILDE  &kp LT     &kp PIPE  &kp MINUS          &kp GT     &kp SLASH  &kp BSLH   &kp DOT    &kp AT    &trans  &trans  &trans  &none  &kp DEL    &kp LS(TAB)  &none      &none      &none
+&none      &none      &kp HASH  &kp AMPS           &kp PLUS              &kp PRCNT  &kp COLON  &kp SEMI  &trans  &trans  &trans         &none      &none        &none      &none      &none
             >;
         };
 
