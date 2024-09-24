@@ -225,6 +225,15 @@ layer_name {
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SELECT_WORD";
+            bindings = <&select_word_right>, <&select_word_left>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -262,6 +271,33 @@ layer_name {
             #binding-cells = <0>;
             bindings = <&out OUT_BLE &bt BT_SEL 3>;
         };
+
+        select_word_right: select_word_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(RIGHT))>;
+            label = "SELECT_WORD_RIGHT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_word_left: select_word_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(LEFT))>;
+            label = "SELECT_WORD_LEFT";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
+
+        select_line_left: select_line {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT) &kp LA(LEFT) &kp LA(LS(LEFT))>;
+            label = "SELECT_LINE";
+            wait-ms = <1>;
+            tap-ms = <1>;
+        };
     };
 
     keymap {
@@ -274,7 +310,7 @@ layer_name {
 &kp TAB     &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                     &kp Y   &kp U          &kp I          &kp O              &kp P                      &none
 &kp ESC     &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                     &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &caps_word
 &kp LSHFT   &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC  &mt LCTRL TAB  &kp LALT  &kp RALT  &mt RCTRL TAB  &kp RGUI          &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHFT
-&magic 4 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &mo 2         &kp ENTER      &none     &none     &bspc          &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PAGE_DOWN      &kp PG_UP                  &magic 4 0
+&magic 4 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &mo 2         &kp ENTER      &mo 3     &none     &bspc          &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PAGE_DOWN      &kp PG_UP                  &magic 4 0
             >;
         };
 
@@ -291,12 +327,12 @@ layer_name {
 
         numbers {
             bindings = <
-&none  &none  &none  &none  &none                                                                        &none      &none     &none     &none      &none
-&none  &none  &none  &none  &none      &none                                                  &none      &kp EQUAL  &kp STAR  &kp PLUS  &none      &none
-&none  &none  &none  &none  &none      &none                                                  &kp CARET  &kp N7     &kp N8    &kp N9    &kp MINUS  &none
-&none  &none  &none  &none  &kp UNDER  &none                                                  &kp COMMA  &kp N4     &kp N5    &kp N6    &kp DOT    &none
-&none  &none  &none  &none  &none      &none  &trans  &trans  &trans  &trans  &trans  &mo 3   &kp N0     &kp N1     &kp N2    &kp N3    &kp FSLH   &none
-&none  &none  &none  &none  &none             &trans  &trans  &trans  &trans  &trans  &trans             &none      &none     &none     &none      &none
+&none  &none      &none     &none      &none                                                                            &none      &none     &none     &none      &none
+&none  &none      &none     &none      &none      &none                                                      &none      &kp EQUAL  &kp STAR  &kp PLUS  &none      &none
+&none  &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none                                                      &kp CARET  &kp N7     &kp N8    &kp N9    &kp MINUS  &none
+&none  &kp ENTER  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT                                                  &kp COMMA  &kp N4     &kp N5    &kp N6    &kp DOT    &none
+&none  &none      &none     &none      &kp UNDER  &none      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0     &kp N1     &kp N2    &kp N3    &kp FSLH   &none
+&none  &none      &none     &none      &none                 &trans  &trans  &trans  &trans  &trans  &trans             &none      &none     &none     &none      &none
             >;
         };
 
