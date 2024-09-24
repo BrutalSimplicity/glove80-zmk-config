@@ -247,7 +247,7 @@ layer_name {
         bspc_cursor: bspc_cursor {
             compatible = "zmk,behavior-hold-tap";
             label = "BSPC_CURSOR";
-            bindings = <&to>, <&bspc>;
+            bindings = <&mo>, <&bspc>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
