@@ -280,12 +280,12 @@ layer_name {
 
         symbols {
             bindings = <
-&none      &none      &none     &none              &none                                                                                &none      &none        &none      &none      &none
-&none      &kp LBRC   &kp LPAR  &kp RPAR           &kp RBRC   &kp HASH                                                           &none  &none      &none        &none      &none      &none
-&kp EXCL   &kp LBKT   &kp SQT   &kp DOUBLE_QUOTES  &kp RBKT   &kp QMARK                                                          &none  &kp LSHFT  &kp LCTRL    &kp PLUS   &kp LGUI   &none
-&kp GRAVE  &kp CARET  &kp STAR  &kp EQUAL          &kp UNDER  &kp DLLR                                                           &none  &kp BSPC   &kp TAB      &kp SPACE  &kp ENTER  &none
-&kp TILDE  &kp LT     &kp PIPE  &kp MINUS          &kp GT     &kp SLASH  &kp BSLH   &kp DOT    &kp STAR  &trans  &trans  &trans  &none  &kp DEL    &kp LS(TAB)  &none      &none      &none
-&none      &kp AMPS   &kp AT    &kp HASH           &kp PLUS              &kp PRCNT  &kp COLON  &kp SEMI  &trans  &trans  &trans         &none      &none        &none      &none      &none
+&none      &none      &none     &none              &none                                                                                &none      &none        &none        &none      &none
+&none      &kp LBRC   &kp LPAR  &kp RPAR           &kp RBRC   &kp HASH                                                           &none  &none      &none        &none        &none      &none
+&kp EXCL   &kp LBKT   &kp SQT   &kp DOUBLE_QUOTES  &kp RBKT   &kp QMARK                                                          &none  &kp LSHFT  &kp LCTRL    &kp PLUS     &kp LGUI   &none
+&kp GRAVE  &kp CARET  &kp STAR  &kp EQUAL          &kp UNDER  &kp DLLR                                                           &none  &kp BSPC   &kp TAB      &kp SPACE    &kp ENTER  &none
+&kp TILDE  &kp LT     &kp PIPE  &kp MINUS          &kp GT     &kp SLASH  &kp BSLH   &kp DOT    &kp STAR  &trans  &trans  &trans  &none  &kp DEL    &kp LS(TAB)  &key_repeat  &none      &none
+&none      &kp AMPS   &kp AT    &kp HASH           &kp PLUS              &kp PRCNT  &kp COLON  &kp SEMI  &trans  &trans  &trans         &none      &none        &none        &none      &none
             >;
         };
 
