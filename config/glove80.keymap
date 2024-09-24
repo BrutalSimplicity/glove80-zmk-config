@@ -229,7 +229,7 @@ layer_name {
         select_word: select_word {
             compatible = "zmk,behavior-mod-morph";
             label = "SELECT_WORD";
-            bindings = <&select_word_right>, <&select_word_left>;
+            bindings = <&select_word_right>, <&select_line_left>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -309,20 +309,20 @@ layer_name {
             tap-ms = <1>;
         };
 
-        select_line_right: select_line {
+        select_line_right: select_line_right {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp HOME &kp LS(END)>;
-            label = "SELECT_LINE";
+            label = "SELECT_LINE_RIGHT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
 
-        select_line_left: select_word_left {
+        select_line_left: select_line_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp END &kp LS(HOME)>;
-            label = "SELECT_WORD_LEFT";
+            label = "SELECT_LINE_LEFT";
             wait-ms = <1>;
             tap-ms = <1>;
         };
