@@ -349,29 +349,29 @@ layer_name {
 &kp TAB     &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                         &kp Y   &kp U          &kp I          &kp O              &kp P                      &kp MINUS
 &caps_word  &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                         &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &kp SQT
 &kp LSHFT   &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC   &mt LCTRL TAB  &kp LALT  &kp RALT  &mt RCTRL TAB     &kp RGUI          &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHFT
-&magic 5 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &rpt_lnum 2 0  &kp ENTER      &mo 4     &none     &bspc_cursor 3 0  &lhs_tap 1 SPACE          &kp LPAR       &kp LBKT       &kp RBKT           &kp RIGHT_PARENTHESIS      &magic 5 0
+&magic 5 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &rpt_lnum 2 0  &kp ENTER      &mo 4     &none     &bspc_cursor 3 0  &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PG_DN          &kp PG_UP                  &magic 5 0
             >;
         };
 
         symbols {
             bindings = <
-&none      &none      &none     &none      &none                                                                                &none      &none        &none      &none      &none
-&none      &kp LBRC   &kp LPAR  &kp RPAR   &kp RBRC   &kp PRCNT                                                          &none  &none      &none        &none      &none      &none
-&kp EXCL   &kp LBKT   &kp STAR  &kp EQUAL  &kp RBKT   &kp QMARK                                                          &none  &kp LSHFT  &kp LCTRL    &kp PLUS   &kp LGUI   &none
-&kp GRAVE  &kp CARET  &kp SQT   &kp DQT    &kp UNDER  &kp DLLR                                                           &none  &kp BSPC   &kp TAB      &kp SPACE  &kp ENTER  &kp LG(ENTER)
-&kp TILDE  &kp LT     &kp PIPE  &kp MINUS  &kp GT     &kp SLASH  &kp BSLH   &kp DOT    &kp STAR  &trans  &trans  &trans  &none  &kp DEL    &kp LS(TAB)  &none      &none      &none
-&none      &kp AMPS   &kp AT    &kp HASH   &kp PLUS              &kp PRCNT  &kp COLON  &kp SEMI  &trans  &trans  &trans         &none      &none        &none      &none      &none
+&none      &none      &none     &none      &none                                                                                   &none      &none      &none        &none      &none
+&none      &kp CARET  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                                          &none     &none      &none      &none        &none      &none
+&kp EXCL   &kp LBKT   &kp LPAR  &kp RPAR   &kp RBKT   &kp LBRC                                                           &kp RBRC  &kp EQUAL  &kp STAR   &kp PLUS     &none      &none
+&kp GRAVE  &kp PIPE   &kp SQT   &kp DQT    &kp UNDER  &kp AMPS                                                           &kp DEL   &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
+&none      &kp TILDE  &kp LT    &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp BSLH  &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
+&none      &none      &none     &none      &none                 &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans            &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
             >;
         };
 
         numbers {
             bindings = <
-&none          &none      &none     &none      &none                                                                              &none      &none     &none     &none      &none
-&none          &none      &none     &none      &none      &none                                                      &kp PERCENT  &kp EQUAL  &kp STAR  &kp PLUS  &none      &none
-&none          &kp LGUI   &kp LALT  &kp LCTRL  &kp LSHFT  &none                                                      &kp CARET    &kp N7     &kp N8    &kp N9    &kp MINUS  &none
-&kp LG(ENTER)  &kp ENTER  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT                                                  &kp COMMA    &kp N4     &kp N5    &kp N6    &kp DOT    &kp DQT
-&none          &none      &none     &none      &kp UNDER  &none      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0       &kp N1     &kp N2    &kp N3    &kp FSLH   &none
-&none          &none      &none     &none      &none                 &trans  &trans  &trans  &trans  &trans  &trans               &kp LBRC   &kp LT    &kp GT    &kp RBRC   &none
+&none          &none      &none      &none      &none                                                                              &none      &none     &none   &none      &none
+&none          &none      &none      &none      &none      &none                                                        &none      &none      &kp STAR  &none   &none      &none
+&none          &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT   &kp PERCENT                                                  &kp CARET  &kp N7     &kp N8    &kp N9  &kp MINUS  &none
+&kp LG(ENTER)  &kp ENTER  &kp SPACE  &kp UP     &kp UNDER  &kp COMMA                                                    &kp EQUAL  &kp N4     &kp N5    &kp N6  &kp PLUS   &kp DQT
+&none          &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp DOT      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0     &kp N1     &kp N2    &kp N3  &kp FSLH   &none
+&none          &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT               &trans  &trans  &trans  &trans  &trans  &trans             &kp COLON  &kp LT    &kp GT  &none      &none
             >;
         };
 
