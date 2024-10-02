@@ -264,6 +264,15 @@ layer_name {
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
         };
+
+        gui_triple_zero: gui_triple_zero {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GUI_TRIPLE_ZERO";
+            bindings = <&kp>, <&triple_zero>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -337,6 +346,13 @@ layer_name {
             wait-ms = <1>;
             tap-ms = <1>;
         };
+
+        triple_zero: triple_zero {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N0 &kp N0 &kp N0>;
+            label = "TRIPLE_ZERO";
+        };
     };
 
     keymap {
@@ -355,23 +371,23 @@ layer_name {
 
         symbols {
             bindings = <
-&none      &none      &none     &none      &none                                                                                  &none      &none      &none        &none      &none
-&none      &kp CARET  &kp AT    &kp HASH   &kp DLLR   &kp PRCNT                                                          &none    &none      &none      &none        &none      &none
-&kp EXCL   &kp LBKT   &kp LPAR  &kp RPAR   &kp RBKT   &kp BSLH                                                           &none    &none      &kp DQT    &kp SQT      &none      &none
-&kp GRAVE  &kp PIPE   &kp STAR  &kp EQUAL  &kp UNDER  &kp AMPS                                                           &kp DEL  &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
-&kp QMARK  &kp TILDE  &kp LT    &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &none    &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
-&none      &none      &kp LBRC  &kp RBRC   &kp PLUS              &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans           &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
+&none      &none      &none      &none      &none                                                                                   &none      &none      &none        &none      &none
+&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                          &none     &none      &none      &none        &none      &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                           &none     &none      &kp DQT    &kp SQT      &none      &none
+&kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS                                                           &kp DEL   &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
+&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp SEMI  &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
+&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans            &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
             >;
         };
 
         numbers {
             bindings = <
-&none          &none      &none      &none      &none                                                                              &none      &none     &none   &none      &none
-&none          &none      &none      &none      &none      &none                                                        &none      &none      &kp STAR  &none   &none      &none
-&none          &kp LBKT   &kp LPAR   &kp RPAR   &kp RBKT   &kp PERCENT                                                  &kp CARET  &kp N7     &kp N8    &kp N9  &kp MINUS  &none
-&kp LG(ENTER)  &kp ENTER  &kp SPACE  &kp UP     &kp UNDER  &kp COMMA                                                    &kp EQUAL  &kp N4     &kp N5    &kp N6  &kp PLUS   &kp DQT
-&none          &none      &kp LEFT   &kp DOWN   &kp RIGHT  &kp DOT      &trans  &trans  &trans  &trans  &trans  &trans  &kp N0     &kp N1     &kp N2    &kp N3  &kp FSLH   &none
-&none          &kp LGUI   &kp LALT   &kp LCTRL  &kp LSHFT               &trans  &trans  &trans  &trans  &trans  &trans             &kp COLON  &kp LT    &kp GT  &none      &none
+&none          &none      &none         &none      &none                                                                                                      &none      &none     &none   &none      &none
+&none          &none      &none         &none      &none          &none                                                                            &none      &none      &kp STAR  &none   &none      &none
+&none          &kp LBKT   &kp LPAR      &kp RPAR   &kp RBKT       &kp PERCENT                                                                      &kp CARET  &kp N7     &kp N8    &kp N9  &kp MINUS  &none
+&kp LG(ENTER)  &kp ENTER  &kp LA(LEFT)  &kp UP     &kp LA(RIGHT)  &kp COMMA                                                                        &kp EQUAL  &kp N4     &kp N5    &kp N6  &kp PLUS   &kp DQT
+&none          &none      &kp LEFT      &kp DOWN   &kp RIGHT      &kp DOT      &trans  &trans  &trans  &trans   &trans    &gui_triple_zero LGUI 0  &kp N0     &kp N1     &kp N2    &kp N3  &kp FSLH   &none
+&none          &kp LGUI   &kp LALT      &kp LCTRL  &kp LSHFT                   &trans  &trans  &trans  &kp DEL  &kp BSPC  &mt LSHFT SPACE                     &kp COLON  &kp LT    &kp GT  &none      &none
             >;
         };
 
