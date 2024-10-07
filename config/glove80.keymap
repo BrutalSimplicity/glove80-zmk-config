@@ -371,12 +371,12 @@ layer_name {
 
         symbols {
             bindings = <
-&none      &none      &none      &none      &none                                                                                   &none      &none      &none        &none      &none
-&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                          &none     &none      &none      &none        &none      &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                           &none     &none      &kp DQT    &kp SQT      &none      &none
-&kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS                                                           &kp DEL   &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
-&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp SEMI  &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
-&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans            &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
+&none      &none      &none      &none      &none                                                                                    &none      &none      &none        &none      &none
+&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                          &none      &none      &none      &none        &none      &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                           &none      &kp DEL    &kp DQT    &kp SQT      &none      &none
+&kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS                                                           &kp COMMA  &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
+&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp SEMI   &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
+&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans             &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
             >;
         };
 
