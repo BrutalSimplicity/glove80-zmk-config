@@ -273,6 +273,24 @@ layer_name {
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lpar_lbkt: lpar_lbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LPAR_LBKT";
+            bindings = <&kp LPAR>, <&kp LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        rpar_rbkt: rpar_rbkt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RPAR_RBKT";
+            bindings = <&kp RPAR>, <&kp RBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -371,12 +389,12 @@ layer_name {
 
         symbols {
             bindings = <
-&none      &none      &none      &none      &none                                                                                    &none      &none      &none        &none      &none
-&none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                          &none      &none      &none      &none        &none      &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                           &none      &kp DEL    &kp DQT    &kp SQT      &none      &none
-&kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS                                                           &kp COMMA  &kp BSPC   &kp TAB    &kp SPACE    &kp ENTER  &kp LG(ENTER)
-&none      &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp SEMI   &kp COLON  &kp QMARK  &kp LS(TAB)  &none      &none
-&none      &none      &kp LBKT   &kp RBKT   &kp PLUS              &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans             &kp LSHFT  &kp LCTRL  &kp LALT     &kp LGUI   &none
+&none      &none      &none       &none       &none                                                                                    &none             &none            &none             &none             &none
+&none      &kp CARET  &kp AT      &kp HASH    &kp DLLR   &kp PRCNT                                                          &none      &none             &none            &none             &none             &none
+&kp EXCL   &kp LBRC   &lpar_lbkt  &rpar_rbkt  &kp RBRC   &kp BSLH                                                           &none      &kp DEL           &kp DQT          &kp SQT           &none             &none
+&kp GRAVE  &kp PIPE   &kp STAR    &kp EQUAL   &kp UNDER  &kp AMPS                                                           &kp COMMA  &rhmi LSHFT BSPC  &rhmm LCTRL TAB  &rhmr LALT SPACE  &rhmp LGUI ENTER  &kp LG(ENTER)
+&none      &kp LT     &kp TILDE   &kp MINUS   &kp GT     &kp SLASH  &kp LGUI   &kp LCTRL  &kp LALT  &trans  &trans  &trans  &kp SEMI   &kp COLON         &kp QMARK        &kp LS(TAB)       &none             &none
+&none      &none      &none       &none       &none                 &kp PRCNT  &kp DOT    &kp SEMI  &trans  &trans  &trans             &none             &none            &none             &none             &none
             >;
         };
 
