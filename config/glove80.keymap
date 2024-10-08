@@ -429,12 +429,12 @@ layer_name {
 
         cursor {
             bindings = <
-&none  &none  &none  &none         &none                                                                        &none      &none      &none      &none      &none
-&none  &none  &none  &none         &none         &none                                                &none     &none      &none      &none      &none      &none
-&none  &none  &none  &none         &none         &kp LG(X)                                            &none     &none      &none      &none      &none      &none
-&none  &none  &none  &select_line  &select_word  &kp LG(C)                                            &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LSHFT  &none
-&none  &none  &none  &none         &none         &kp LG(V)  &none  &none  &none  &none  &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
-&none  &none  &none  &none         &none                    &none  &none  &none  &none  &none  &none            &none      &none      &none      &none      &none
+&none  &none            &none            &none           &none                                                                             &none      &none      &none      &none      &none
+&none  &none            &none            &none           &none              &none                                                &none     &none      &none      &none      &none      &none
+&none  &none            &none            &none           &none              &kp LG(X)                                            &none     &none      &none      &none      &none      &none
+&none  &lhmp LGUI LEFT  &lhmr LALT DOWN  &lhmm LCTRL UP  &lhmi LSHFT RIGHT  &kp LG(C)                                            &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &kp LSHFT  &none
+&none  &none            &none            &none           &none              &kp LG(V)  &none  &none  &none  &none  &none  &none  &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &none      &none
+&none  &none            &none            &none           &none                         &none  &none  &none  &none  &none  &none            &none      &none      &none      &none      &none
             >;
         };
 
