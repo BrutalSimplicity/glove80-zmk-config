@@ -416,9 +416,9 @@ layer_name {
             bindings = <
 &none      &none      &none      &none      &none                                                                                          &none             &none            &none             &none             &none
 &none      &kp CARET  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                                                                &none      &none             &none            &none             &none             &none
-&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                                 &none      &kp DEL           &kp DQT          &kp SQT           &none             &none
+&kp EXCL   &kp LBRC   &kp LPAR   &kp RPAR   &kp RBRC   &kp BSLH                                                                 &none      &kp DEL           &kp LS(TAB)      &none             &none             &none
 &kp GRAVE  &kp PIPE   &kp STAR   &kp EQUAL  &kp UNDER  &kp AMPS                                                                 &kp COMMA  &rhmi LSHFT BSPC  &rhmm LCTRL TAB  &rhmr LALT SPACE  &rhmp LGUI ENTER  &kp LG(ENTER)
-&kp PLUS   &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &mt LGUI PRCNT  &kp LCTRL  &kp LALT   &trans  &trans  &trans  &kp SEMI   &kp COLON         &kp QMARK        &kp LS(TAB)       &none             &none
+&kp PLUS   &kp LT     &kp TILDE  &kp MINUS  &kp GT     &kp SLASH  &mt LGUI PRCNT  &kp LCTRL  &kp LALT   &trans  &trans  &trans  &kp SEMI   &kp COLON         &kp QMARK        &kp DOT           &none             &none
 &none      &none      &none      &none      &none                 &kp SQT         &kp DQT    &kp QMARK  &trans  &trans  &trans             &none             &none            &none             &none             &none
             >;
         };
