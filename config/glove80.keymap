@@ -309,6 +309,16 @@ layer_name {
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
+
+        hrm_slow: hrm_slow {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+
+            label = "HRM_SLOW";
+        };
     };
 
     macros {
@@ -418,12 +428,12 @@ layer_name {
 
         numbers {
             bindings = <
-&none          &none             &none                &none                 &none                                                                                           &none         &none             &none        &none          &none
-&none          &none             &none                &none                 &none                  &none                                                         &kp CARET  &kp LPAR      &kp LBKT          &kp RBKT     &kp RPAR       &none
-&none          &none             &none                &none                 &none                  &kp COLON                                                     &kp STAR   &kp N7        &kp N8            &kp N9       &kp MINUS      &kp PRCNT
-&kp LG(ENTER)  &lhmp LGUI ENTER  &lhmr LALT LA(LEFT)  &lhmp LCTRL UP_ARROW  &lhmi LSHFT LA(RIGHT)  &kp COMMA                                                     &kp EQUAL  &mt LSHFT N4  &mt LCTRL N5      &mt LALT N6  &mt LGUI PLUS  &kp DQT
-&none          &none             &kp LEFT             &kp DOWN              &kp RIGHT              &kp DOT    &trans  &trans  &trans  &trans   &trans    &mo 4   &kp N0     &kp N1        &kp N2            &kp N3       &kp FSLH       &none
-&none          &none             &none                &none                 &none                             &trans  &trans  &trans  &kp DEL  &kp BSPC  &trans             &kp LT        &kp GREATER_THAN  &none        &none          &none
+&none          &none             &none                &none                 &none                                                                                           &none               &none               &none              &none                &none
+&none          &none             &none                &none                 &none                  &none                                                         &kp CARET  &kp LPAR            &kp LBKT            &kp RBKT           &kp RPAR             &none
+&none          &none             &none                &none                 &none                  &kp COLON                                                     &kp STAR   &kp N7              &kp N8              &kp N9             &kp MINUS            &kp PRCNT
+&kp LG(ENTER)  &lhmp LGUI ENTER  &lhmr LALT LA(LEFT)  &lhmp LCTRL UP_ARROW  &lhmi LSHFT LA(RIGHT)  &kp COMMA                                                     &kp EQUAL  &hrm_slow LSHFT N4  &hrm_slow LCTRL N5  &hrm_slow LALT N6  &hrm_slow LGUI PLUS  &kp DQT
+&none          &none             &kp LEFT             &kp DOWN              &kp RIGHT              &kp DOT    &trans  &trans  &trans  &trans   &trans    &mo 4   &kp N0     &kp N1              &kp N2              &kp N3             &kp FSLH             &none
+&none          &none             &none                &none                 &none                             &trans  &trans  &trans  &kp DEL  &kp BSPC  &trans             &kp LT              &kp GREATER_THAN    &none              &none                &none
             >;
         };
 
