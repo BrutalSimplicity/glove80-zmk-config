@@ -85,18 +85,6 @@ layer_name {
             bindings = <&mo>, <&kp>;
         };
 
-        lhm: left_homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <170>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        };
-
         lhmi: left_homerow_mod_index_finger {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -142,18 +130,6 @@ layer_name {
             bindings = <&kp>, <&kp>;
 
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        };
-
-        rhm: right_homerow_mod {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <170>;
-            require-prior-idle-ms = <125>;
-            bindings = <&kp>, <&kp>;
-
-            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         };
 
         rhmi: right_homerow_mod_index_finger {
@@ -203,20 +179,6 @@ layer_name {
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
         };
 
-        msft: multi_shift {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp RIGHT_SHIFT>, <&kp CAPSLOCK>;
-        };
-
-        mt250: mod_tap_250 {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            bindings = <&kp>, <&kp>;
-        };
-
         bspc: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_DELETE";
@@ -224,90 +186,6 @@ layer_name {
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        select_word: select_word {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SELECT_WORD";
-            bindings = <&select_word_right>, <&select_word_left>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        select_line: select_line {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SELECT_LINE";
-            bindings = <&select_line_right>, <&select_line_left>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bspc_cursor: bspc_cursor {
-            compatible = "zmk,behavior-hold-tap";
-            label = "BSPC_CURSOR";
-            bindings = <&mo>, <&bspc>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        rpt_lnum: rpt_lnum {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RPT_LNUM";
-            bindings = <&mo>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
-        };
-
-        gui_triple_zero: gui_triple_zero {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GUI_TRIPLE_ZERO";
-            bindings = <&kp>, <&triple_zero>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        lpar_lbkt: lpar_lbkt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LPAR_LBKT";
-            bindings = <&kp LPAR>, <&kp LBKT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rpar_rbkt: rpar_rbkt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RPAR_RBKT";
-            bindings = <&kp RPAR>, <&kp RBKT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        lpar_lt: lpar_lt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LPAR_LT";
-            bindings = <&kp LPAR>, <&kp LT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        rpar_gt: rpar_gt {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RPAR_GT";
-            bindings = <&kp RPAR>, <&kp GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         hrm_slow: hrm_slow {
@@ -318,15 +196,6 @@ layer_name {
             bindings = <&kp>, <&kp>;
 
             label = "HRM_SLOW";
-        };
-
-        mt_caps_word: mt_caps_word {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_CAPS_WORD";
-            bindings = <&kp>, <&caps_word>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
         };
 
         multi_caps: multi_caps {
@@ -422,12 +291,12 @@ layer_name {
 
         base {
             bindings = <
-&none       &none         &none         &none          &none                                                                                                                                &none          &none          &none              &none                      &none
-&none       &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                                        &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
-&kp TAB     &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                                         &kp Y   &kp U          &kp I          &kp O              &kp P                      &kp MINUS
-&kp ESC     &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                                         &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &kp SQT
-&kp LSHIFT  &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC  &mt LCTRL TAB  &kp LALT          &kp RALT          &mt RCTRL LS(TAB)  &multi_caps       &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHIFT
-&magic 4 0  &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &lt 2 ESC     &lt 0 ENTER    &kp LA(LC(LGUI))  &kp LA(LC(LGUI))  &bspc              &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PG_DN          &kp PG_UP                  &magic 4 0
+&none            &none         &none         &none          &none                                                                                                                                &none          &none          &none              &none                      &none
+&none            &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                                        &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
+&kp TAB          &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                                         &kp Y   &kp U          &kp I          &kp O              &kp P                      &kp MINUS
+&lhmp GLOBE ESC  &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                                         &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &rhmp SQT GLOBE
+&kp LSHIFT       &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC  &mt LCTRL TAB  &kp LALT          &kp RALT          &mt RCTRL LS(TAB)  &multi_caps       &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHIFT
+&magic 4 0       &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &lt 2 ESC     &lt 0 ENTER    &kp LA(LC(LGUI))  &kp LA(LC(LGUI))  &bspc              &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PG_DN          &kp PG_UP                  &magic 4 0
             >;
         };
 
