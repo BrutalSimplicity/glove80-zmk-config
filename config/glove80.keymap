@@ -198,11 +198,20 @@ layer_name {
             label = "HRM_SLOW";
         };
 
-        multi_caps: multi_caps {
+        multi_caps_td: multi_caps_td {
             compatible = "zmk,behavior-tap-dance";
-            label = "MULTI_CAPS";
+            label = "MULTI_CAPS_TD";
             #binding-cells = <0>;
             bindings = <&caps_word>, <&kp CAPS>;
+        };
+
+        multi_caps_ht: multi_caps_ht {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MULTI_CAPS_HT";
+            bindings = <&kp>, <&multi_caps_td>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -291,12 +300,12 @@ layer_name {
 
         base {
             bindings = <
-&none            &none         &none         &none          &none                                                                                                                                &none          &none          &none              &none                      &none
-&none            &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                                        &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
-&kp TAB          &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                                         &kp Y   &kp U          &kp I          &kp O              &kp P                      &kp MINUS
-&lhmp GLOBE ESC  &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                                         &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &rhmp SQT GLOBE
-&kp LSHIFT       &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC  &mt LCTRL TAB  &kp LALT          &kp RALT          &mt RCTRL LS(TAB)  &multi_caps       &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHIFT
-&magic 4 0       &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &lt 2 ESC     &lt 0 ENTER    &kp LA(LC(LGUI))  &kp LA(LC(LGUI))  &bspc              &lhs_tap 1 SPACE          &kp DOWN       &kp UP         &kp PG_DN          &kp PG_UP                  &magic 4 0
+&none            &none         &none         &none          &none                                                                                                                          &none          &none          &none              &none                      &none
+&none            &kp N1        &kp N2        &kp N3         &kp N4         &kp N5                                                                                                  &kp N6  &kp N7         &kp N8         &kp N9             &kp N0                     &none
+&kp TAB          &kp Q         &kp W         &kp E          &kp R          &kp T                                                                                                   &kp Y   &kp U          &kp I          &kp O              &kp P                      &kp MINUS
+&lhmp GLOBE ESC  &lhmp LGUI A  &lhmr LALT S  &lhmm LCTRL D  &lhmi LSHFT F  &kp G                                                                                                   &kp H   &rhmi RSHFT J  &rhmm RCTRL K  &rhmr RIGHT_ALT L  &rhmp RIGHT_GUI SEMICOLON  &rhmp SQT GLOBE
+&kp LSHIFT       &kp Z         &kp X         &kp C          &kp V          &kp B   &mt LGUI ESC  &kp LALT     &kp LCTRL         &kp RCTRL         &kp RALT  &multi_caps_ht RCMD 0  &kp N   &kp M          &kp COMMA      &kp DOT            &kp SLASH                  &kp RSHIFT
+&magic 4 0       &kp HOME      &kp END       &kp LEFT       &kp RIGHT              &lt 2 ESC     &lt 0 ENTER  &kp LA(LC(LGUI))  &kp LA(LC(LGUI))  &bspc     &lhs_tap 1 SPACE               &kp DOWN       &kp UP         &kp PG_DN          &kp PG_UP                  &magic 4 0
             >;
         };
 
